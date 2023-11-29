@@ -70,7 +70,6 @@ function initLight() {
     // const dirLightHelper = new THREE.DirectionalLightHelper(dirLight, 1);
     // scene.add(dirLightHelper);
 
-    //光投影相机
     // const cam = dirLight.shadow.camera;
     // const cameraHelper = new THREE.CameraHelper(cam);
     // scene.add(cameraHelper);
@@ -207,11 +206,9 @@ function OneTree(x, y, z, scale, group) {
 function loadSkyLand() {
 
     const loader = new THREE.TextureLoader();
-
     const skyBox = loader.load('asset/sky.jpg');
-    // const back = new THREE.TextureLoader().load('asset/longGrass.jpg');
-
     scene.background = skyBox;
+    
     scene.fog = new THREE.Fog(0xbeffb8, 0.5, 100);
 
 
